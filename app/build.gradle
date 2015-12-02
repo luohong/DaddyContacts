@@ -33,4 +33,6 @@ dependencies {
     compile 'com.android.support:appcompat-v7:23.1.0'
     compile files('libs/com.baidu.tts_2.1.1.20151118_1e57d7d_beta.jar')
     compile files('libs/galaxy_lite.jar')
+    compile 'com.umeng.analytics:analytics:latest.integration'
+    compile files('libs/umeng-update-v2.6.0.1.jar')
 }

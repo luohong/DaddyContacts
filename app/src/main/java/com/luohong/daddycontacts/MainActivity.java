@@ -18,6 +18,8 @@ import com.baidu.tts.client.SpeechSynthesizeBag;
 import com.baidu.tts.client.SpeechSynthesizer;
 import com.baidu.tts.client.SpeechSynthesizerListener;
 import com.baidu.tts.client.TtsMode;
+import com.luohong.daddycontacts.ui.base.BaseActivity;
+import com.umeng.update.UmengUpdateAgent;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -27,7 +29,7 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity implements SpeechSynthesizerListener {
+public class MainActivity extends BaseActivity implements SpeechSynthesizerListener {
 
     private static final String TAG = MainActivity.class.getSimpleName();
 
@@ -47,6 +49,8 @@ public class MainActivity extends AppCompatActivity implements SpeechSynthesizer
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        UmengUpdateAgent.update(this);
+        UmengUpdateAgent.setUpdateOnlyWifi(false);
 
         initEnv();
         initTts();
